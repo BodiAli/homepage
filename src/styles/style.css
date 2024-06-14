@@ -4,7 +4,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
-  margin: 24px 30px;
 }
 
 header {
@@ -12,6 +11,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 24px 30px;
 }
 
 .image-container {
@@ -40,11 +40,15 @@ header {
   color: #a49a90;
 }
 
-.about-me-links > svg {
-  width: 20px;
+.about-me-links svg {
+  width: 25px;
 }
 
-section {
+.about-me-links a {
+  text-decoration: none;
+}
+
+header > section {
   flex: 0 1 540px;
   background-color: rgb(239, 233, 224);
   padding: 1rem;
@@ -53,37 +57,144 @@ section {
   gap: 10px;
 }
 
-section > h1 {
+header > section > h1 {
   font-family: "playfair display, serif";
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
 
-section > p {
+header > section > p {
   color: rgba(0, 0, 0, 0.708);
   line-height: 1.2rem;
 }
 
-section > .about-me-links {
+header > section > .about-me-links {
   align-self: end;
   margin-top: 20px;
 }
 
 main {
   padding: 0 calc((100vw - 60px - 300px - 540px) / 2);
-  margin: 5rem 0;
-}
-
-main > .project-cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 100px));
-}
-
-.project-cards-container > .card {
-  outline: 2px solid black;
-  padding: 2rem;
+  margin: 5rem 30px;
 }
 
 main > h2 {
   font-family: "playfair display, serif";
-  font-size: 1.4rem;
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+main > .project-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 261px);
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-cards-container > .card {
+  outline: 2px solid black;
+  display: grid;
+  grid-template-rows: 3.5fr 1fr 1.6fr;
+}
+
+.card > .screenshot {
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.card:nth-child(1) > .screenshot {
+  background-color: #766d64;
+  opacity: 90%;
+}
+
+.card:nth-child(2) > .screenshot {
+  background-color: #514538;
+  opacity: 90%;
+}
+
+.card:nth-child(3) > .screenshot {
+  background-color: #c2a689b6;
+  opacity: 90%;
+}
+
+.card:nth-child(4) > .screenshot {
+  background-color: #587567b9;
+  opacity: 90%;
+}
+
+.card:nth-child(5) > .screenshot {
+  background-color: #8ba99bb2;
+  opacity: 90%;
+}
+
+.card:nth-child(6) > .screenshot {
+  background-color: #737862e1;
+  opacity: 90%;
+}
+
+.screenshot > p {
+  font-family: "playfair display, serif";
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.project-header {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header img {
+  width: 25px;
+}
+
+.project-header > h3 {
+  font-family: "playfair display, serif";
+  font-size: 1.3rem;
+}
+
+.card > p {
+  padding: 0 1rem;
+  color: rgba(0, 0, 0, 0.791);
+}
+
+footer {
+  background-color: #737862b5;
+  padding: 1.6rem calc((100vw - 300px - 540px) / 2);
+  display: flex;
+  color: white;
+}
+
+footer > section.contact-me {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-me > h2 {
+  font-family: "playfair display, serif";
+
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+.contact-me > p.get-in-touch {
+  margin-bottom: 25px;
+}
+
+.contact-me > .town-name {
+  margin-bottom: 25px;
+}
+
+.contact-me > .telephone {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.contact-me > .email {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 5px;
 }
