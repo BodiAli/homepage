@@ -78,6 +78,8 @@ header > section > p {
 header > section > .about-me-links {
   align-self: end;
   margin-top: 20px;
+  display: flex;
+  gap: 8px;
 }
 
 main {
@@ -89,7 +91,8 @@ main > h2 {
   font-family: "playfair display, serif";
   font-size: 1.7rem;
   margin-bottom: 15px;
-  margin-left: 9px;
+  display: flex;
+  justify-content: center;
 }
 
 main > .project-cards-container {
@@ -175,6 +178,7 @@ footer {
   background-color: #737862b5;
   padding: 1.6rem calc((100vw - 300px - 540px) / 2);
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   color: white;
   gap: 40px;
@@ -184,6 +188,7 @@ footer > section.contact-me {
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding: 1rem;
 }
 
 footer > picture {
@@ -191,7 +196,7 @@ footer > picture {
   flex: 0.7 1 320px;
 }
 
-footer img {
+footer > picture img {
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
@@ -240,7 +245,7 @@ footer img {
 }
 
 .contact-me-links img {
-  width: 32px;
+  width: 28px;
 }
 
 a > img,
@@ -306,16 +311,14 @@ svg:hover {
 
 @media (min-width: 1200px) {
 }
-@media (max-width: 1000px) {
-  footer img {
+@media (max-width: 1000px) and (min-width: 636px) {
+  footer > img img {
     object-fit: contain;
   }
 
   body {
     background-position: center;
   }
-
-  /* The float */
 
   header {
     overflow: visible;
@@ -326,13 +329,14 @@ svg:hover {
   .placeholder {
     display: block;
     position: static;
-    padding: 25%;
+    padding: 7.5rem;
     float: left;
   }
 
   header > section {
     display: block;
-    padding: 2rem;
+    padding: 2rem 2rem 3rem;
+    width: 100%;
   }
 
   header > section > h1 {
@@ -343,18 +347,110 @@ svg:hover {
   .image-container {
     position: absolute;
     z-index: 1;
-    width: 305px;
-    top: -48px;
-    left: calc(50% - 238px - 80px);
-    height: 310px;
+    width: 290px;
+    top: -25px;
+    left: calc(50% - 238px - 64px);
+    height: 290px;
   }
 
   .image-container > img {
-    height: 310px;
+    height: 290px;
   }
 
-  /* */
+  .image-container > span {
+    top: -25px;
+    left: 100%;
+    width: 200px;
+    height: fit-content;
+    color: whitesmoke;
+  }
+  header > section > .about-me-links {
+    display: none;
+  }
+}
+
+@media (max-width: 635px) and (min-width: 501px) {
+  footer > picture img {
+    object-fit: contain;
+  }
+
+  body {
+    background-position: center;
+  }
+
+  header {
+    overflow: visible;
+    position: relative;
+    margin-top: 100px;
+  }
+
+  .placeholder {
+    display: block;
+    position: static;
+    padding: 7.5rem;
+    float: left;
+  }
+
+  header > section {
+    display: block;
+    padding: 2rem 2rem 3rem;
+    width: 100%;
+  }
+
+  header > section > h1 {
+    margin: 35px 0 25px;
+    transform: translateX(2%);
+  }
+
+  .image-container {
+    position: absolute;
+    z-index: 1;
+    width: 270px;
+    top: -10px;
+    left: -10px;
+    height: 270px;
+  }
+
+  .image-container > img {
+    height: 270px;
+  }
+
+  .image-container > span {
+    top: -30px;
+    left: 98%;
+    width: 200px;
+    height: fit-content;
+    color: whitesmoke;
+  }
+  header > section > .about-me-links {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
+  body {
+    background-position: center;
+  }
+
+  header > section > h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  header > section > .about-me-links {
+    align-self: center;
+    gap: 14px;
+  }
+
+  .contact-me > h2 {
+    align-self: center;
+  }
+
+  .contact-me-links {
+    align-self: center;
+  }
+
+  footer {
+    padding-bottom: 0;
+  }
 }
