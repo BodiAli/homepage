@@ -1,1 +1,1 @@
-README.md file
+Responsive Homepage
